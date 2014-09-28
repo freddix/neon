@@ -1,7 +1,8 @@
+# based on PLD Linux spec git://git.pld-linux.org/packages/.git
 Summary:	An HTTP and WebDAV client library
 Name:		neon
 Version:	0.30.0
-Release:	2
+Release:	3
 License:	GPL
 Group:		Libraries
 Source0:	http://www.webdav.org/neon/%{name}-%{version}.tar.gz
@@ -60,6 +61,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} -j1 install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
+
 %find_lang %{name}
 
 %clean
@@ -78,7 +81,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/neon-config
 %attr(755,root,root) %{_libdir}/libneon.so
-%{_libdir}/libneon.la
 %{_includedir}/neon
 %{_pkgconfigdir}/neon.pc
 
