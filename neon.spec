@@ -1,12 +1,12 @@
-# based on PLD Linux spec git://git.pld-linux.org/packages/.git
+# based on PLD Linux spec git://git.pld-linux.org/packages/neon.git
 Summary:	An HTTP and WebDAV client library
 Name:		neon
-Version:	0.30.0
-Release:	3
+Version:	0.30.1
+Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	http://www.webdav.org/neon/%{name}-%{version}.tar.gz
-# Source0-md5:	fb60b3a124eeec441937a812c456fd94
+# Source0-md5:	231adebe5c2f78fded3e3df6e958878e
 URL:		http://www.webdav.org/neon/
 BuildRequires:	autoconf
 BuildRequires:	automake
